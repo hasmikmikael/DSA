@@ -34,6 +34,26 @@ public class Main {
             System.out.println(number);
         for (int number : numbers) // O(n)
             System.out.println(number);
+
+
+        //---------O(n^2)---------------
+        // runtime complexity O(n*n) or O(n^2)
+        for (int first : numbers) // O(n)
+            for (int second : numbers) // O(n)
+                System.out.println(first + ", " + second);
+
+        // runtime complexity O(n+n^2) // simplified O(n^2)
+        for (int number : numbers) // O(n)
+            System.out.println(number);
+        for (int first : numbers) // O(n)
+            for (int second : numbers) // O(n)
+                System.out.println(first + ", " + second);
+
+        // runtime complexity O(n*n*n) or O(n^3)
+        for (int first : numbers) // O(n)
+            for (int second : numbers) // O(n)
+                for (int third : numbers) // O(n)
+                    System.out.println(first + ", " + second + ", " + third);
     }
 
     //---------O(n)---------------
