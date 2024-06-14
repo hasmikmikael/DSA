@@ -64,4 +64,15 @@ public class Main {
         for (String name : names) // O(m)
             System.out.println(name);
     }
+
+
+    //---------Space Complexity---------------
+    public void greet(String[] names) {
+        // O(n) space
+        String[] copy = new String[names.length];
+
+        // O(1) space
+        for (int i=0; i<names.length; i++)
+            System.out.println("Hi" + names[i]);
+    }
 }
