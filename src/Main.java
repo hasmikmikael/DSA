@@ -1,10 +1,15 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //-------------Big O Notation---------------
+        // ************* Big O Notation ******************
         int[] numbers = { 10, 20, 30, 40 };
         log(numbers);
+
+        // ********** Arrays *************************
+        array();
     }
 
     public static void log(int[] numbers) {
@@ -74,5 +79,25 @@ public class Main {
         // O(1) space
         for (int i=0; i<names.length; i++)
             System.out.println("Hi" + names[i]);
+    }
+
+    //-----------Working with Arrays--------------
+    public static void array() {
+        int[] numbers = new int[3];
+        System.out.println(numbers); // [I@60addb54
+
+        System.out.println(Arrays.toString(numbers)); // [0, 0, 0]
+
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+
+        System.out.println(Arrays.toString(numbers)); // [10, 20, 30]
+
+        // or
+        int[] nums = {10, 20, 30};
+        System.out.println(Arrays.toString(nums)); // [10, 20, 30]
+
+        System.out.println(nums.length); // 3
     }
 }
