@@ -87,6 +87,7 @@ public class Array {
     }
 
     public void reverse() {
+        // O(n)
         int start = 0;
         int end = count - 1;
 
@@ -98,5 +99,28 @@ public class Array {
             start++;
             end--;
         }
+    }
+
+    public void insertAt(int item, int index) {
+        // O(n)
+        if (index < 0 || index >= count)
+            throw  new IllegalArgumentException("Invalid index");
+
+        if (items.length == count) {
+            int[] newItems = new int[count * 2];
+
+            for (int i = 0; i < count; i++)
+                newItems[i] = items[i];
+
+            items = newItems;
+        }
+
+        // Shift the items to the right to make space for the new item
+        for (int i = count - 1; i >= index; i--)
+            items[i + 1] = items[i];
+
+        // Insert the new item at the specified index
+        items[index] = item;
+        count++;
     }
 }

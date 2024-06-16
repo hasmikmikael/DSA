@@ -32,6 +32,8 @@ public class Main {
         number.reverse();
         number.print();
 
+        number.insertAt(5, 1);
+        number.print();
     }
 
     public static void log(int[] numbers) {
