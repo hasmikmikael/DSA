@@ -19,6 +19,7 @@ public class Main {
         number.insert(40);
         number.removeAt(2);
         System.out.println(number.indexOf(20));
+        System.out.println(number.max());
         number.print();
     }
 

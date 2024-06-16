@@ -56,4 +56,15 @@ public class Array {
 
         return -1;
     }
+
+    public int max() {
+        // O(n)
+        int max = items[0];
+        for (int i = 1; i < count; i++) {
+            if (items[i] > max)
+                max = items[i];
+        }
+
+        return max;
+    }
 }
