@@ -29,6 +29,9 @@ public class Main {
         Array commonItems = array.intersect(number);
         commonItems.print();
 
+        number.reverse();
+        number.print();
+
     }
 
     public static void log(int[] numbers) {

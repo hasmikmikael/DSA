@@ -85,4 +85,18 @@ public class Array {
 
         return result;
     }
+
+    public void reverse() {
+        int start = 0;
+        int end = count - 1;
+
+        while (start < end) {
+            int temp = items[start];
+            items[start] = items[end];
+            items[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
 }
