@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Array {
     private int[] items;
     private int count;
@@ -66,5 +68,21 @@ public class Array {
         }
 
         return max;
+    }
+
+    public Array intersect(Array another) {
+        // O(n*m)
+        ArrayList<Integer> commonItems = new ArrayList<Integer>();
+
+        for (int i = 0; i < count; i++) {
+            if (another.indexOf(items[i]) >= 0)
+                commonItems.add(items[i]);
+        }
+
+        Array result = new Array(commonItems.size());
+        for (int item : commonItems)
+            result.insert(item);
+
+        return result;
     }
 }

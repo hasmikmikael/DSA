@@ -21,6 +21,14 @@ public class Main {
         System.out.println(number.indexOf(20));
         System.out.println(number.max());
         number.print();
+
+        Array array = new Array(2);
+        array.insert(10);
+        array.insert(50);
+
+        Array commonItems = array.intersect(number);
+        commonItems.print();
+
     }
 
     public static void log(int[] numbers) {
