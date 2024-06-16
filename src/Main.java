@@ -10,6 +10,16 @@ public class Main {
 
         // ********** Arrays *************************
         array();
+
+        // ********* Array Class ********************
+        Array number = new Array(3);
+        number.insert(10);
+        number.insert(20);
+        number.insert(30);
+        number.insert(40);
+        number.removeAt(2);
+        System.out.println(number.indexOf(20));
+        number.print();
     }
 
     public static void log(int[] numbers) {
