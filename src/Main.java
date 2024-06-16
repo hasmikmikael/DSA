@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -34,6 +35,20 @@ public class Main {
 
         number.insertAt(5, 1);
         number.print();
+
+        // ************* Dynamic Arrays *****************
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        System.out.println(list); // [10, 20, 30]
+        list.indexOf(20);
+        list.lastIndexOf(20);
+        list.contains(20);
+        list.size(); // 3
+        list.remove(0);
+        System.out.println(list); // [20, 30]
+        list.toArray();
     }
 
     public static void log(int[] numbers) {
