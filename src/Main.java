@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
+//import java.util.LinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -52,7 +52,14 @@ public class Main {
         list.toArray();
 
         // ************* Linked Lists ****************
-        linkedList();
+        //linkedList();
+
+        // ********** Building a Linked List **********
+        var linkedList = new LinkedList();
+        linkedList.addLast(10);
+        linkedList.addLast(20);
+        linkedList.addLast(30);
+
     }
 
     public static void log(int[] numbers) {
@@ -145,21 +152,21 @@ public class Main {
     }
 
     //-------------Working with Linked Lists-----------------
-    public static void linkedList() {
-        LinkedList list = new LinkedList();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        System.out.println(list);
-        list.addFirst(5);
-        System.out.println(list); // [5, 10, 20, 30]
-        System.out.println(list.contains(10)); // true
-        System.out.println(list.indexOf(10)); // 1
-        System.out.println(list.size()); // 4
-        var array = list.toArray();
-        System.out.println(Arrays.toString(array)); // [5, 10, 20, 30]
-        list.removeLast();
-        list.remove(1);
-        list.removeFirst();
-    }
+//    public static void linkedList() {
+//        LinkedList list = new LinkedList();
+//        list.add(10);
+//        list.add(20);
+//        list.add(30);
+//        System.out.println(list);
+//        list.addFirst(5);
+//        System.out.println(list); // [5, 10, 20, 30]
+//        System.out.println(list.contains(10)); // true
+//        System.out.println(list.indexOf(10)); // 1
+//        System.out.println(list.size()); // 4
+//        var array = list.toArray();
+//        System.out.println(Arrays.toString(array)); // [5, 10, 20, 30]
+//        list.removeLast();
+//        list.remove(1);
+//        list.removeFirst();
+//    }
 }
