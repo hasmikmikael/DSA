@@ -78,6 +78,14 @@ public class LinkedList {
         // [10 -> 20  30]
         // previous -> 20
         // last -> 20
+        if (isEmpty())
+            throw new NoSuchElementException();
+
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
         var previous = getPrevious(last);
         last = previous;
         last.next = null;
