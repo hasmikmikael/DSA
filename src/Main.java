@@ -65,6 +65,8 @@ public class Main {
         linkedList.removeFirst();
         linkedList.removeLast();
         System.out.println(linkedList.size()); // 2
+        var arr = linkedList.toArray();
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void log(int[] numbers) {
