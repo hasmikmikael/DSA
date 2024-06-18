@@ -59,6 +59,8 @@ public class Main {
         linkedList.addLast(10);
         linkedList.addLast(20);
         linkedList.addLast(30);
+        linkedList.addFirst(5);
+        System.out.println(linkedList.indexOf(10)); // 1
 
     }
 
