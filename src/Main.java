@@ -61,7 +61,7 @@ public class Main {
         linkedList.addLast(30);
         linkedList.addFirst(5);
         System.out.println(linkedList.indexOf(10)); // 1
-
+        System.out.println(linkedList.contains(10)); // true
     }
 
     public static void log(int[] numbers) {
