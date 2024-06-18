@@ -5,11 +5,22 @@ public class LinkedList {
     public void addLast(int item) {
         var node = new Node(item);
 
-        if (first == null)
+        if (isEmpty())
             first = last = node;
         else {
             last.next = node;
             last = node;
+        }
+    }
+
+    public void addFirst(int item) {
+        var node = new Node(item);
+
+        if (isEmpty())
+            first = last = node;
+        else {
+            node.next = first;
+            first = node;
         }
     }
 
@@ -20,5 +31,9 @@ public class LinkedList {
         private Node(int value) {
             this.value = value;
         }
+    }
+
+    private boolean isEmpty() {
+        return first == null;
     }
 }
