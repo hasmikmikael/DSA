@@ -64,6 +64,7 @@ public class Main {
         System.out.println(linkedList.contains(10)); // true
         linkedList.removeFirst();
         linkedList.removeLast();
+        System.out.println(linkedList.size()); // 2
     }
 
     public static void log(int[] numbers) {
