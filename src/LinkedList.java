@@ -71,4 +71,24 @@ public class LinkedList {
         first.next = null;
         first = second;
     }
+
+    public void removeLast() {
+        // [10 -> 20 -> 30]
+        // last -> 30
+        // [10 -> 20  30]
+        // previous -> 20
+        // last -> 20
+        var previous = getPrevious(last);
+        last = previous;
+        last.next = null;
+    }
+
+    private Node getPrevious(Node node) {
+        var current = first;
+        while (current != null) {
+            if (current.next == last) return current;
+            current = current.next;
+        }
+        return null;
+    }
 }
