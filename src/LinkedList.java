@@ -149,4 +149,33 @@ public class LinkedList {
         last.next = null;
         first = previous;
     }
+
+    // Exercise - Kth Node from the End in Linked List.
+    // Find the Kth node from the end
+    // of a linked list in one pass.
+    public int getKthFromTheEnd(int k) {
+        // [10 -> 20 -> 30 -> 40 -> 50]
+        //              *           *
+        // K = 1 (50)
+        // K = 2 (40)
+        // K = 3 (30)  (distance = 2) // they are apart from 2 nodes
+        // Kth node (distance = k - 1)
+
+        if (isEmpty())
+            throw new IllegalStateException();
+
+        var a = first;
+        var b = first;
+
+        for (int i = 0; i < k-1; i++) {
+            b = b.next;
+            if (b == null)
+                throw new IllegalArgumentException();
+        }
+        while (b != last) {
+            a = a.next;
+            b = b.next;
+        }
+        return a.value;
+    }
 }
