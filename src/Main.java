@@ -56,15 +56,16 @@ public class Main {
 
         // ********** Building a Linked List **********
         var linkedList = new LinkedList();
-        linkedList.addLast(10);
-        linkedList.addLast(20);
-        linkedList.addLast(30);
-        linkedList.addFirst(5);
-        System.out.println(linkedList.indexOf(10)); // 1
-        System.out.println(linkedList.contains(10)); // true
-        linkedList.removeFirst();
-        linkedList.removeLast();
-        System.out.println(linkedList.size()); // 2
+//        linkedList.addLast(10);
+//        linkedList.addLast(20);
+//        linkedList.addLast(30);
+//        linkedList.addFirst(5);
+//        System.out.println(linkedList.indexOf(10)); // 1
+//        System.out.println(linkedList.contains(10)); // true
+//        linkedList.removeFirst();
+//        linkedList.removeLast();
+//        System.out.println(linkedList.size()); // 2
+        linkedList.reverse();
         var arr = linkedList.toArray();
         System.out.println(Arrays.toString(arr));
     }

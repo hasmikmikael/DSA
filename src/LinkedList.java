@@ -121,4 +121,32 @@ public class LinkedList {
 
         return array;
     }
+
+    // Exercise - Reversing a Linked List.
+    public void reverse() {
+        // [10 -> 20 -> 30]
+        // [10 <- 20 <- 30]
+        // p      c     n
+        // n = c.next;
+        // c.next = p;
+        // [10 <- 20   30]
+        //         p    c    n       // second iteration
+        // [10 <- 20 <- 30]
+        //              p    c    n  // third iteration
+        if (isEmpty()) return;
+
+        var previous = first;
+        var current = first.next;
+        // changing the direction of the links
+        while (current != null) {
+            var next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        last = first;
+        last.next = null;
+        first = previous;
+    }
 }
