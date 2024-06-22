@@ -88,6 +88,11 @@ public class Main {
         System.out.println(stack); // [10, 20]
         top = stack.peek();
         System.out.println(top); // 20
+
+        Stacks st = new Stacks();
+        String str = "abcd";
+        var result = st.reverse(str);
+        System.out.println(result); // dcba
     }
 
     public static void log(int[] numbers) {
