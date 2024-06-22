@@ -28,12 +28,18 @@ public class Stacks {
         Stack<Character> stack = new Stack<>();
 
         for (char ch : input.toCharArray()) {
-            if (ch == '(')
+            if (ch == '(' || ch == '[' || ch == '{' || ch == '<')
                 stack.push(ch);
 
-            if (ch == ')') {
+            if (ch == ')' || ch == ']' || ch == '}' || ch == '>' ) {
                 if (stack.empty()) return false;
-                stack.pop();
+                var top = stack.pop();
+                if (
+                    (ch == ')' && top != '(') ||
+                    (ch == ']' && top != '[') ||
+                    (ch == '}' && top != '{') ||
+                    (ch == '>' && top != '<')
+                ) return false;
             }
         }
 

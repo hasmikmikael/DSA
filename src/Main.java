@@ -97,8 +97,9 @@ public class Main {
         // Edge cases
         // (
         // (()
+        // ( ]
         // ) (
-        String strExp = ")1+2(";
+        String strExp = "((1+2)>";
         System.out.println(st.isBalancedExpression(strExp)); // false
     }
 
