@@ -20,4 +20,23 @@ public class Stacks {
 
         return reversed.toString();
     }
+
+    // Exercise - Balanced Expressions.
+    // Whether the pairs and orders of
+    // brackets ()[]{}<> are correct in the String?
+    public boolean isBalancedExpression(String input) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : input.toCharArray()) {
+            if (ch == '(')
+                stack.push(ch);
+
+            if (ch == ')') {
+                if (stack.empty()) return false;
+                stack.pop();
+            }
+        }
+
+        return stack.empty();
+    }
 }

@@ -93,6 +93,13 @@ public class Main {
         String str = "abcd";
         var result = st.reverse(str);
         System.out.println(result); // dcba
+
+        // Edge cases
+        // (
+        // (()
+        // ) (
+        String strExp = ")1+2(";
+        System.out.println(st.isBalancedExpression(strExp)); // false
     }
 
     public static void log(int[] numbers) {
