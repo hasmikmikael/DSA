@@ -89,9 +89,9 @@ public class Main {
         top = stack.peek();
         System.out.println(top); // 20
 
-        Stacks st = new Stacks();
         String str = "abcd";
-        var result = st.reverse(str);
+        StringReverser reverser = new StringReverser();
+        var result = reverser.reverse(str);
         System.out.println(result); // dcba
 
         // Edge cases
@@ -100,7 +100,9 @@ public class Main {
         // ( ]
         // ) (
         String strExp = "((1+2)>";
-        System.out.println(st.isBalancedExpression(strExp)); // false
+        Expression exp = new Expression();
+        var res = exp.isBalanced(strExp);
+        System.out.println(res); // false
     }
 
     public static void log(int[] numbers) {
