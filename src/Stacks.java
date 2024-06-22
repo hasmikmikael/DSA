@@ -1,6 +1,12 @@
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class Stacks {
+
+    private final List<Character> leftBrackets = Arrays.asList('(', '[', '{', '<');
+    private final List<Character> rightBrackets = Arrays.asList(')', ']', '}', '>');
+
     // Exercise - Reversing a String.
     public String reverse(String input) {
         if (input == null)
@@ -33,6 +39,7 @@ public class Stacks {
 
             if (isRight(ch)) {
                 if (stack.empty()) return false;
+
                 var top = stack.pop();
                 if (bracketsMatch(top, ch)) return false;
             }
@@ -42,17 +49,22 @@ public class Stacks {
     }
 
     private boolean isLeft(char ch) {
-        return ch == '(' || ch == '[' || ch == '{' || ch == '<';
+        // return ch == '(' || ch == '[' || ch == '{' || ch == '<';
+        return leftBrackets.contains(ch);
     }
 
     private boolean isRight(char ch) {
-        return ch == ')' || ch == ']' || ch == '}' || ch == '>';
+        // return ch == ')' || ch == ']' || ch == '}' || ch == '>';
+        return rightBrackets.contains(ch);
     }
 
     private boolean bracketsMatch(char left, char right) {
-        return (right == ')' && left != '(') ||
-                (right == ']' && left != '[') ||
-                (right == '}' && left != '{') ||
-                (right == '>' && left != '<');
+        // (, [, {, <
+        // ), ], }, >
+        return leftBrackets.indexOf(left) == rightBrackets.indexOf((right));
+//        return (right == ')' && left != '(') ||
+//                (right == ']' && left != '[') ||
+//                (right == '}' && left != '{') ||
+//                (right == '>' && left != '<');
     }
 }
