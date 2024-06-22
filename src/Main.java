@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 //import java.util.LinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -73,9 +74,20 @@ public class Main {
 //        var arr = linkedList.toArray();
 //        System.out.println(Arrays.toString(arr));
 //       linkedList.printMiddle(); // 30, 40
-        var listWithLoop = LinkedList.createWithLoop();
-        System.out.println(listWithLoop.hasLoop());
+//        var listWithLoop = LinkedList.createWithLoop();
+//        System.out.println(listWithLoop.hasLoop());
 
+        // *************** Stacks *****************
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        System.out.println(stack); // [10, 20, 30]
+        var top = stack.pop();
+        System.out.println(top); // 30
+        System.out.println(stack); // [10, 20]
+        top = stack.peek();
+        System.out.println(top); // 20
     }
 
     public static void log(int[] numbers) {
