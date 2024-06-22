@@ -178,4 +178,25 @@ public class LinkedList {
         }
         return a.value;
     }
+
+    // Exercise - Find the middle of a Linked List.
+    public void printMiddle() {
+        // Find the middle of a linked list in one pass. If the list has an even
+        // number of nodes, there would be two middle nodes. (Note: Assume that
+        // you don’t know the size of the list ahead of time
+        if (isEmpty())
+            throw new IllegalStateException();
+
+        var a = first;
+        var b = first;
+        while (b != last && b.next != last) {
+            b = b.next.next;
+            a = a.next;
+        }
+
+        if (b == last)
+            System.out.println(a.value);
+        else
+            System.out.println(a.value + ", " + a.next.value);
+    }
 }

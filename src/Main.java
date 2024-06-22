@@ -59,6 +59,9 @@ public class Main {
         linkedList.addLast(10);
         linkedList.addLast(20);
         linkedList.addLast(30);
+        linkedList.addLast(40);
+        linkedList.addLast(50);
+        linkedList.addLast(60);
 //        linkedList.addFirst(5);
 //        System.out.println(linkedList.indexOf(10)); // 1
 //        System.out.println(linkedList.contains(10)); // true
@@ -66,9 +69,10 @@ public class Main {
 //        linkedList.removeLast();
 //        System.out.println(linkedList.size()); // 2
 //        linkedList.reverse();
-        System.out.println(linkedList.getKthFromTheEnd(2)); // 20
+//        System.out.println(linkedList.getKthFromTheEnd(2)); // 20
 //        var arr = linkedList.toArray();
 //        System.out.println(Arrays.toString(arr));
+        linkedList.printMiddle(); // 30, 40
     }
 
     public static void log(int[] numbers) {
