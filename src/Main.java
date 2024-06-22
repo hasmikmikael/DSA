@@ -55,13 +55,13 @@ public class Main {
         //linkedList();
 
         // ********** Building a Linked List **********
-        var linkedList = new LinkedList();
-        linkedList.addLast(10);
-        linkedList.addLast(20);
-        linkedList.addLast(30);
-        linkedList.addLast(40);
-        linkedList.addLast(50);
-        linkedList.addLast(60);
+//        var linkedList = new LinkedList();
+//        linkedList.addLast(10);
+//        linkedList.addLast(20);
+//        linkedList.addLast(30);
+//        linkedList.addLast(40);
+//        linkedList.addLast(50);
+//        linkedList.addLast(60);
 //        linkedList.addFirst(5);
 //        System.out.println(linkedList.indexOf(10)); // 1
 //        System.out.println(linkedList.contains(10)); // true
@@ -72,7 +72,10 @@ public class Main {
 //        System.out.println(linkedList.getKthFromTheEnd(2)); // 20
 //        var arr = linkedList.toArray();
 //        System.out.println(Arrays.toString(arr));
-        linkedList.printMiddle(); // 30, 40
+//       linkedList.printMiddle(); // 30, 40
+        var listWithLoop = LinkedList.createWithLoop();
+        System.out.println(listWithLoop.hasLoop());
+
     }
 
     public static void log(int[] numbers) {
