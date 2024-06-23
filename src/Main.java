@@ -115,7 +115,7 @@ public class Main {
         System.out.println(top); // 20
 
         // MinStack
-        Minstack minStack = new Minstack();
+        MinStack minStack = new MinStack();
         minStack.push(5);
         minStack.push(2);
         minStack.push(10);
