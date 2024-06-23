@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Stack;
+//import java.util.Stack;
 //import java.util.LinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -78,16 +78,16 @@ public class Main {
 //        System.out.println(listWithLoop.hasLoop());
 
         // *************** Stacks *****************
-        Stack<Integer> stack = new Stack<>();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        System.out.println(stack); // [10, 20, 30]
-        var top = stack.pop();
-        System.out.println(top); // 30
-        System.out.println(stack); // [10, 20]
-        top = stack.peek();
-        System.out.println(top); // 20
+//        Stack<Integer> stack = new Stack<>();
+//        stack.push(10);
+//        stack.push(20);
+//        stack.push(30);
+//        System.out.println(stack); // [10, 20, 30]
+//        var top = stack.pop();
+//        System.out.println(top); // 30
+//        System.out.println(stack); // [10, 20]
+//        top = stack.peek();
+//        System.out.println(top); // 20
 
         String str = "abcd";
         StringReverser reverser = new StringReverser();
@@ -103,6 +103,17 @@ public class Main {
         Expression exp = new Expression();
         var res = exp.isBalanced(strExp);
         System.out.println(res); // false
+
+        // ******* Building a Stack ***********
+        Stack st = new Stack();
+        st.push(10);
+        st.push(20);
+        st.push(30);
+        st.pop();
+        System.out.println(st)
+        ; // [10, 20]
+        var top = st.peek();
+        System.out.println(top); // 20
     }
 
     public static void log(int[] numbers) {
