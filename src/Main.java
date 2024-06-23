@@ -110,10 +110,19 @@ public class Main {
         st.push(20);
         st.push(30);
         st.pop();
-        System.out.println(st)
-        ; // [10, 20]
+        System.out.println(st); // [10, 20]
         var top = st.peek();
         System.out.println(top); // 20
+
+        // MinStack
+        Minstack minStack = new Minstack();
+        minStack.push(5);
+        minStack.push(2);
+        minStack.push(10);
+        minStack.push(1);
+        System.out.println(minStack.min()); // 1
+        minStack.pop();
+        System.out.println(minStack.min()); // 2
     }
 
     public static void log(int[] numbers) {
