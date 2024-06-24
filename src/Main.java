@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Queue;
+//import java.util.Queue;
 //import java.util.Stack;
 //import java.util.LinkedList;
 
@@ -127,14 +127,19 @@ public class Main {
         System.out.println(minStack.min()); // 2
 
         // ********** Queues ****************
-        Queue<Integer> queue = new ArrayDeque<>();
+        java.util.Queue<Integer> queue = new ArrayDeque<>();
         queue.add(10);
         queue.add(20);
         queue.add(30);
-        System.out.println(queue); // [10, 20, 30]
+        queue.add(40);
+        System.out.println(queue); // [10, 20, 30, 40]
         var front = queue.remove();
         System.out.println(front); // 10
-        System.out.println(queue); // [20, 30]
+        System.out.println(queue); // [20, 30, 40]
+
+        // Reversing a Queue
+        Queue.reverse(queue);
+        System.out.println(queue);// [40, 30, 20]
     }
 
     public static void log(int[] numbers) {
