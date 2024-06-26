@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.PriorityQueue;
+//import java.util.PriorityQueue;
 //import java.util.Queue;
 //import java.util.Stack;
 //import java.util.LinkedList;
@@ -176,15 +176,26 @@ public class Main {
         System.out.println(first); // 10
 
         // Priority Queues
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
-        priorityQueue.add(5);
-        priorityQueue.add(1);
-        priorityQueue.add(3);
-        priorityQueue.add(2);
-        while (!priorityQueue.isEmpty()) {
-            System.out.println(priorityQueue.remove()); // 1 2 3 5
-        }
+//        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+//        priorityQueue.add(5);
+//        priorityQueue.add(1);
+//        priorityQueue.add(3);
+//        priorityQueue.add(2);
+//        while (!priorityQueue.isEmpty()) {
+//            System.out.println(priorityQueue.remove()); // 1 2 3 5
+//        }
 
+        // *********** Building a Priority Queue ************
+        PriorityQueue prQueue = new PriorityQueue();
+        prQueue.add(5);
+        prQueue.add(3);
+        prQueue.add(6);
+        prQueue.add(1);
+        prQueue.add(4);
+        System.out.println(prQueue); // [1, 3, 4, 5, 6]
+
+        while (!prQueue.isEmpty())
+            System.out.println(prQueue.remove()); // 6 5 4 3 1
     }
 
     public static void log(int[] numbers) {
