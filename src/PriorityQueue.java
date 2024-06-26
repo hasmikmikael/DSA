@@ -11,11 +11,20 @@ public class PriorityQueue {
     private int count;
 
     public void add(int item) {
-        if (count == items.length)
+        if (isFull())
             //items = Arrays.copyOf(items, items.length * 2);
             throw new IllegalStateException();
 
-        // Shifting items
+        var i = shiftItemsToInsert(item);
+        items[i] = item;
+        count++;
+    }
+
+    public boolean isFull() {
+        return count == items.length;
+    }
+
+    public int shiftItemsToInsert(int item) {
         int i;
         for (i = count - 1; i >= 0; i--) {
             if (items[i] > item)
@@ -23,8 +32,7 @@ public class PriorityQueue {
             else
                 break;
         }
-        items[i + 1] = item;
-        count++;
+        return i + 1;
     }
 
     public int remove() {
