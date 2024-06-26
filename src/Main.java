@@ -166,6 +166,14 @@ public class Main {
         System.out.println(arrayQueue); // [60, 70, 0, 40, 50]
         arrayQueue.enqueue(80);
         System.out.println(arrayQueue); // [60, 70, 80, 40, 50]
+
+        QueueWithTwoStacks queueWithTwoStacks = new QueueWithTwoStacks();
+        queueWithTwoStacks.enqueue(10);
+        queueWithTwoStacks.enqueue(20);
+        queueWithTwoStacks.enqueue(30);
+        var first = queueWithTwoStacks.dequeue();
+        System.out.println(first); // 10
+
     }
 
     public static void log(int[] numbers) {
