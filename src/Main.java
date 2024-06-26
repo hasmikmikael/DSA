@@ -153,6 +153,19 @@ public class Main {
         System.out.println(arrayQueue); // [0, 20, 30, 0, 0]
         System.out.println(arrayQueue.peek()); // 20
         System.out.println(arrayQueue.isEmpty()); // false
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue); // [0, 0, 30, 0, 0]
+        arrayQueue.enqueue(40);
+        arrayQueue.enqueue(50);
+        arrayQueue.enqueue(60);
+        System.out.println(arrayQueue); // [60, 0, 30, 40, 50]
+        arrayQueue.enqueue(70);
+        System.out.println(arrayQueue); // [60, 70, 30, 40, 50]
+        // arrayQueue.enqueue(80); // Exception
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue); // [60, 70, 0, 40, 50]
+        arrayQueue.enqueue(80);
+        System.out.println(arrayQueue); // [60, 70, 80, 40, 50]
     }
 
     public static void log(int[] numbers) {

@@ -14,13 +14,15 @@ public class ArrayQueue {
         if ( count == items.length)
             throw  new IllegalStateException();
 
-        items[rear++] = item;
+        items[rear] = item;
+        rear = (rear + 1) % items.length;
         count++;
     }
 
     public int dequeue() {
         var item = items[front];
-        items[front++] = 0;
+        items[front] = 0;
+        front = (front + 1) % items.length;
         count--;
         return item;
     }
