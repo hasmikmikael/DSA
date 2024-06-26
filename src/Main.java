@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 //import java.util.Queue;
 //import java.util.Stack;
 //import java.util.LinkedList;
@@ -173,6 +174,16 @@ public class Main {
         queueWithTwoStacks.enqueue(30);
         var first = queueWithTwoStacks.dequeue();
         System.out.println(first); // 10
+
+        // Priority Queues
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add(5);
+        priorityQueue.add(1);
+        priorityQueue.add(3);
+        priorityQueue.add(2);
+        while (!priorityQueue.isEmpty()) {
+            System.out.println(priorityQueue.remove()); // 1 2 3 5
+        }
 
     }
 
