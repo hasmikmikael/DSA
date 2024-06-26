@@ -140,6 +140,19 @@ public class Main {
         // Reversing a Queue
         Queue.reverse(queue);
         System.out.println(queue);// [40, 30, 20]
+
+        // Building a Queue Using an Array
+        ArrayQueue arrayQueue = new ArrayQueue(5);
+        arrayQueue.enqueue(10);
+        arrayQueue.enqueue(20);
+        arrayQueue.enqueue(30);
+        System.out.println(arrayQueue); // [10, 20, 30, 0, 0]
+        System.out.println(arrayQueue.peek()); // 10
+        var frnt = arrayQueue.dequeue();
+        System.out.println(frnt); // 10
+        System.out.println(arrayQueue); // [0, 20, 30, 0, 0]
+        System.out.println(arrayQueue.peek()); // 20
+        System.out.println(arrayQueue.isEmpty()); // false
     }
 
     public static void log(int[] numbers) {
