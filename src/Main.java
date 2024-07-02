@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Queue;
 //import java.util.PriorityQueue;
 //import java.util.Queue;
 //import java.util.Stack;
@@ -139,8 +140,8 @@ public class Main {
         System.out.println(queue); // [20, 30, 40]
 
         // Reversing a Queue
-        Queue.reverse(queue);
-        System.out.println(queue);// [40, 30, 20]
+//        Queue.reverse(queue);
+//        System.out.println(queue);// [40, 30, 20]
 
         // Building a Queue Using an Array
         ArrayQueue arrayQueue = new ArrayQueue(5);
@@ -196,6 +197,19 @@ public class Main {
 
         while (!prQueue.isEmpty())
             System.out.println(prQueue.remove()); // 6 5 4 3 1
+
+        // ********** Exercise -  Queue Reverser ***************
+        java.util.Queue<Integer> que = new ArrayDeque<>();
+        que.add(10);
+        que.add(20);
+        que.add(30);
+        que.add(40);
+        que.add(50);
+
+        QueueReverser queueReverser = new QueueReverser();
+        queueReverser.reverseFirstKElements(que, 3);
+        System.out.println(que); // [30, 20, 10, 40, 50]
+
     }
 
     public static void log(int[] numbers) {
