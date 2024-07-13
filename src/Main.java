@@ -217,10 +217,23 @@ public class Main {
         linkedListQueue.enqueue(30);
         linkedListQueue.enqueue(40);
         linkedListQueue.enqueue(50);
-        System.out.println(linkedListQueue);
+        System.out.println(linkedListQueue); // [10, 20, 30, 40, 50]
         var fnt = linkedListQueue.dequeue();
-        System.out.println(fnt);
-        System.out.println(linkedListQueue);
+        System.out.println(fnt); // 10
+        System.out.println(linkedListQueue); // [20, 30, 40, 50]
+
+        // ********** Exercise - Building a Stack using two Queues *******
+        StackWithTwoQueues stackWithTwoQueues = new StackWithTwoQueues();
+        stackWithTwoQueues.push(10);
+        stackWithTwoQueues.push(20);
+        stackWithTwoQueues.push(30);
+        stackWithTwoQueues.push(40);
+        stackWithTwoQueues.push(50);
+        stackWithTwoQueues.push(60);
+        System.out.println(stackWithTwoQueues); // [10, 20, 30, 40, 50, 60]
+        int pop = stackWithTwoQueues.pop();
+        System.out.println(pop); // 60
+        System.out.println(stackWithTwoQueues); // [10, 20, 30, 40, 50]
 
     }
 
