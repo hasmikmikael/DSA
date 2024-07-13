@@ -210,6 +210,18 @@ public class Main {
         queueReverser.reverseFirstKElements(que, 3);
         System.out.println(que); // [30, 20, 10, 40, 50]
 
+        // ********** Exercise - Building a Queue using Linked List ******
+        LinkedListQueue linkedListQueue = new LinkedListQueue();
+        linkedListQueue.enqueue(10);
+        linkedListQueue.enqueue(20);
+        linkedListQueue.enqueue(30);
+        linkedListQueue.enqueue(40);
+        linkedListQueue.enqueue(50);
+        System.out.println(linkedListQueue);
+        var fnt = linkedListQueue.dequeue();
+        System.out.println(fnt);
+        System.out.println(linkedListQueue);
+
     }
 
     public static void log(int[] numbers) {
