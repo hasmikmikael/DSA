@@ -269,6 +269,10 @@ public class Main {
         // 2=John
         // 3=Marianne
         // 4=null
+
+        CharFinder charFinder = new CharFinder();
+        var ch = charFinder.findFirstNonRepeatingChar("a green apple");
+        System.out.println(ch); // g
     }
 
     public static void log(int[] numbers) {
