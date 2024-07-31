@@ -2,12 +2,14 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Queue;
 //import java.util.PriorityQueue;
 //import java.util.Queue;
 //import java.util.Stack;
 //import java.util.LinkedList;
+import java.util.Set;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -273,6 +275,14 @@ public class Main {
         CharFinder charFinder = new CharFinder();
         var ch = charFinder.findFirstNonRepeatingChar("a green apple");
         System.out.println(ch); // g
+
+        // ************ Sets *******************
+        Set<Integer> set = new HashSet<>();
+        int[] nmbrs = { 1, 3, 3, 2, 4, 2 };
+        for (var nmbr : nmbrs)
+            set.add(nmbr);
+
+        System.out.println(set); // [1, 2, 3, 4]
     }
 
     public static void log(int[] numbers) {
