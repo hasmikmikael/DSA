@@ -283,6 +283,9 @@ public class Main {
             set.add(nmbr);
 
         System.out.println(set); // [1, 2, 3, 4]
+
+        var chr = charFinder.findFirstRepeatedChar("green apple");
+        System.out.println(chr); // e
     }
 
     public static void log(int[] numbers) {
