@@ -295,6 +295,7 @@ public class Main {
         System.out.println(hashTable.get(6)); // A
         hashTable.put(6, "A+");
         System.out.println(hashTable.get(6)); // A+
+        hashTable.remove(6);
         System.out.println(hashTable.get(10)); // null
     }
 
