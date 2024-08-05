@@ -286,6 +286,13 @@ public class Main {
 
         var chr = charFinder.findFirstRepeatedChar("green apple");
         System.out.println(chr); // e
+
+        // ********** Building a Hash Table ***************
+        HashTable hashTable = new HashTable();
+        hashTable.put(6, "A");
+        hashTable.put(8, "B");
+        hashTable.put(11, "C");
+        hashTable.put(6, "A+");
     }
 
     public static void log(int[] numbers) {
