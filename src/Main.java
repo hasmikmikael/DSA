@@ -297,6 +297,11 @@ public class Main {
         System.out.println(hashTable.get(6)); // A+
         hashTable.remove(6);
         System.out.println(hashTable.get(10)); // null
+
+        // ******** Exercises Hash Table ************
+        int[] arr = { 1, 2, 2, 3, 4, 4, 4 };
+        HashTableExercises table = new HashTableExercises();
+        System.out.println(table.mostFrequent(arr)); // 4
     }
 
     public static void log(int[] numbers) {
