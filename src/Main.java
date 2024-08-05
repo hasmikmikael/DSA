@@ -292,7 +292,10 @@ public class Main {
         hashTable.put(6, "A");
         hashTable.put(8, "B");
         hashTable.put(11, "C");
+        System.out.println(hashTable.get(6)); // A
         hashTable.put(6, "A+");
+        System.out.println(hashTable.get(6)); // A+
+        System.out.println(hashTable.get(10)); // null
     }
 
     public static void log(int[] numbers) {
