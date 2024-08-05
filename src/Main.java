@@ -302,6 +302,9 @@ public class Main {
         int[] arr = { 1, 2, 2, 3, 4, 4, 4 };
         HashTableExercises table = new HashTableExercises();
         System.out.println(table.mostFrequent(arr)); // 4
+
+        int[] arry = { 1, 7, 5, 9, 2, 12, 3 };
+        System.out.println(table.countPairsWithDiff(arry, 2)); // 4
     }
 
     public static void log(int[] numbers) {
