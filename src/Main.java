@@ -305,6 +305,11 @@ public class Main {
 
         int[] arry = { 1, 7, 5, 9, 2, 12, 3 };
         System.out.println(table.countPairsWithDiff(arry, 2)); // 4
+
+        int[] aray = { 2, 7, 11, 15 };
+        var twoSum = table.twoSum(aray, 9);
+        for (var element : twoSum)
+            System.out.println(element); // 0 1
     }
 
     public static void log(int[] numbers) {
