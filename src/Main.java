@@ -287,7 +287,7 @@ public class Main {
         var chr = charFinder.findFirstRepeatedChar("green apple");
         System.out.println(chr); // e
 
-        // ********** Building a Hash Table ***************
+        // ********** Building a Hash Table using Chaining strategy ***************
         HashTable hashTable = new HashTable();
         hashTable.put(6, "A");
         hashTable.put(8, "B");
@@ -310,6 +310,17 @@ public class Main {
         var twoSum = table.twoSum(aray, 9);
         for (var element : twoSum)
             System.out.println(element); // 0 1
+
+        // *** Building a Hash Table using Linear Probing strategy ***
+        HashMap hashMap = new HashMap();
+        hashMap.put(6, "A");
+        hashMap.put(8, "B");
+        hashMap.put(11, "C");
+        System.out.println(hashMap.get(6)); // A
+        hashMap.put(6, "A+");
+        System.out.println(hashMap.get(6)); // A+
+        hashMap.remove(6);
+        System.out.println(hashMap.get(10)); // null
     }
 
     public static void log(int[] numbers) {
