@@ -332,6 +332,9 @@ public class Main {
         tree.insert(8);
         tree.insert(10);
         System.out.println(tree.find(10)); // true
+        tree.traversePreOrder(); // 7 4 1 6 9 8 10
+        tree.traverseInOrder(); // 1 4 6 7 8 9 10
+        tree.traversePostOrder(); // 1 6 4 8 10 9 7
 
         // ******* Recursion ***************
         System.out.println(factorial(4)); // 24
