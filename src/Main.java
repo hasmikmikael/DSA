@@ -332,6 +332,26 @@ public class Main {
         tree.insert(8);
         tree.insert(10);
         System.out.println(tree.find(10)); // true
+
+        // ******* Recursion ***************
+        System.out.println(factorial(4)); // 24
+    }
+
+    // ********* Recursion ******************
+    public static int factorial(int n) {
+        // // Iteration approach using a loop
+        // var factorial = 1;
+        // for (var i = n; i > 1; i--)
+        // factorial *= i;
+        // return factorial;
+
+        // Recursion
+
+        // Base condition
+        if (n == 0)
+            return 1;
+
+        return n * factorial(n - 1);
     }
 
     public static void log(int[] numbers) {
