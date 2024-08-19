@@ -335,6 +335,7 @@ public class Main {
         tree.traversePreOrder(); // 7 4 1 6 9 8 10
         tree.traverseInOrder(); // 1 4 6 7 8 9 10
         tree.traversePostOrder(); // 1 6 4 8 10 9 7
+        System.out.println(tree.height()); // 2
 
         // ******* Recursion ***************
         System.out.println(factorial(4)); // 24
