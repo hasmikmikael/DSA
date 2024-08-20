@@ -355,6 +355,14 @@ public class Main {
         System.out.println(tree2.isBinarySearchTree()); // true
         tree2.swapRoot();
         System.out.println(tree2.isBinarySearchTree()); // false
+
+        tree.printNodesAtDistance(0); // 7
+        tree.printNodesAtDistance(1); // 4 9
+        tree.printNodesAtDistance(2); // 1 6 8 10
+
+        // var lst = tree.getNodesAtDistance(1);
+        // for (var item : lst)
+        // System.out.println(item); // 4 9
     }
 
     // ********* Recursion ******************
