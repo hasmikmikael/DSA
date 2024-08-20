@@ -340,6 +340,17 @@ public class Main {
 
         // ******* Recursion ***************
         System.out.println(factorial(4)); // 24
+
+        Tree tree2 = new Tree();
+        tree2.insert(7);
+        tree2.insert(4);
+        tree2.insert(9);
+        tree2.insert(1);
+        tree2.insert(6);
+        tree2.insert(8);
+        tree2.insert(10);
+        System.out.println(tree.equals(tree2)); // true
+        System.out.println(tree.equals(null)); // false
     }
 
     // ********* Recursion ******************
