@@ -351,6 +351,10 @@ public class Main {
         tree2.insert(10);
         System.out.println(tree.equals(tree2)); // true
         System.out.println(tree.equals(null)); // false
+
+        System.out.println(tree2.isBinarySearchTree()); // true
+        tree2.swapRoot();
+        System.out.println(tree2.isBinarySearchTree()); // false
     }
 
     // ********* Recursion ******************
