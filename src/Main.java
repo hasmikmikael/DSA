@@ -366,6 +366,7 @@ public class Main {
 
         tree.traverseLevelOrder(); // 7 4 9 1 6 8 10
         System.out.println(tree.size()); // 7
+        System.out.println(tree.countLeaves()); // 4
     }
 
     // ********* Recursion ******************
