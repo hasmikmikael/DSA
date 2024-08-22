@@ -363,6 +363,8 @@ public class Main {
         // var lst = tree.getNodesAtDistance(1);
         // for (var item : lst)
         // System.out.println(item); // 4 9
+
+        tree.traverseLevelOrder(); // 7 4 9 1 6 8 10
     }
 
     // ********* Recursion ******************

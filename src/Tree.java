@@ -211,23 +211,28 @@ public class Tree {
         printNodesAtDistance(root.rightChild, distance - 1);
     }
 
-    // public ArrayList<Integer> getNodesAtDistance(int distance) {
-    // var list = new ArrayList<Integer>();
-    // getNodesAtDistance(root, distance, list);
-    // return list;
-    // }
+    public ArrayList<Integer> getNodesAtDistance(int distance) {
+        var list = new ArrayList<Integer>();
+        getNodesAtDistance(root, distance, list);
+        return list;
+    }
 
-    // private void getNodesAtDistance(Node root, int distance, ArrayList<Integer>
-    // list) {
-    // if (root == null)
-    // return;
+    private void getNodesAtDistance(Node root, int distance, ArrayList<Integer> list) {
+        if (root == null)
+            return;
 
-    // if (distance == 0) {
-    // list.add(root.value);
-    // return;
-    // }
+        if (distance == 0) {
+            list.add(root.value);
+            return;
+        }
 
-    // getNodesAtDistance(root.leftChild, distance - 1, list);
-    // getNodesAtDistance(root.rightChild, distance - 1, list);
-    // }
+        getNodesAtDistance(root.leftChild, distance - 1, list);
+        getNodesAtDistance(root.rightChild, distance - 1, list);
+    }
+
+    public void traverseLevelOrder() {
+        for (var i = 0; i <= height(); i++)
+            for (var value : getNodesAtDistance(i))
+                System.out.println(value);
+    }
 }
