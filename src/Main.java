@@ -369,6 +369,7 @@ public class Main {
         System.out.println(tree.countLeaves()); // 4
         System.out.println(tree.max()); // 10
         System.out.println(tree.contains(8)); // true
+        System.out.println(tree.areSibling(1, 6)); // true
     }
 
     // ********* Recursion ******************
