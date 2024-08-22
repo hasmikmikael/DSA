@@ -365,6 +365,7 @@ public class Main {
         // System.out.println(item); // 4 9
 
         tree.traverseLevelOrder(); // 7 4 9 1 6 8 10
+        System.out.println(tree.size()); // 7
     }
 
     // ********* Recursion ******************
