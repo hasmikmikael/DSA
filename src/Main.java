@@ -380,6 +380,7 @@ public class Main {
         avlTree.insert(10);
         avlTree.insert(20);
         avlTree.insert(30);
+        // 10 is right heavy
     }
 
     // ********* Recursion ******************
