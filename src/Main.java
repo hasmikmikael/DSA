@@ -380,7 +380,21 @@ public class Main {
         avlTree.insert(10);
         avlTree.insert(20);
         avlTree.insert(30);
+        // 10
+        // //20
+        // ////30
         // 10 is right heavy
+        // Left Rotate 10
+        //
+        // avlTree.insert(10);
+        // avlTree.insert(30);
+        // avlTree.insert(20);
+        // 10
+        // //30
+        // 20
+        // 10 is right heavy
+        // Right Rotate 30
+        // Left Rotate 10
     }
 
     // ********* Recursion ******************
