@@ -373,7 +373,13 @@ public class Main {
 
         var ancestors = tree.getAncestors(8);
         for (var ancestor : ancestors)
-            System.out.println(ancestor);
+            System.out.println(ancestor); // 9 7
+
+        // ********* AVL Trees **************
+        var avlTree = new AVLTree();
+        avlTree.insert(10);
+        avlTree.insert(20);
+        avlTree.insert(30);
     }
 
     // ********* Recursion ******************
