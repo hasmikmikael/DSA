@@ -338,4 +338,19 @@ public class Tree {
 
         return false;
     }
+
+    public boolean isBalanced() {
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node root) {
+        if (root == null)
+            return true;
+
+        var balanceFactor = height(root.leftChild) - height(root.rightChild);
+
+        return Math.abs(balanceFactor) <= 1 &&
+                isBalanced(root.leftChild) &&
+                isBalanced(root.rightChild);
+    }
 }
