@@ -353,4 +353,10 @@ public class Tree {
                 isBalanced(root.leftChild) &&
                 isBalanced(root.rightChild);
     }
+
+    // In a perfect binary tree, every
+    // level (except the last level) is full of nodes.
+    public boolean isPerfect() {
+        return size() == (Math.pow(2, height() + 1) - 1);
+    }
 }

@@ -376,12 +376,14 @@ public class Main {
             System.out.println(ancestor); // 9 7
 
         System.out.println(tree.isBalanced()); // true
+        System.out.println(tree.isPerfect()); // true
 
         var tr = new Tree();
         tr.insert(12);
         tr.insert(3);
         tr.insert(9);
         System.out.println(tr.isBalanced()); // false
+        System.out.println(tr.isPerfect()); // false
 
         // ********* AVL Trees **************
         var avlTree = new AVLTree();
