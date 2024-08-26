@@ -405,6 +405,15 @@ public class Main {
         // 10 is right heavy
         // Right Rotate 30
         // Left Rotate 10
+
+        // ********* Heaps *********
+        var heap = new Heap(10);
+        heap.insert(10);
+        heap.insert(5);
+        heap.insert(17);
+        heap.insert(4);
+        heap.insert(22);
+        // [22, 17, 10, 4, 5]
     }
 
     // ********* Recursion ******************
