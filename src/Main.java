@@ -414,6 +414,9 @@ public class Main {
         heap.insert(4);
         heap.insert(22);
         // [22, 17, 10, 4, 5]
+
+        heap.remove();
+        // [17, 5, 10, 4]
     }
 
     // ********* Recursion ******************
