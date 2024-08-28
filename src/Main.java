@@ -433,6 +433,11 @@ public class Main {
         for (var i = numrs.length - 1; i >= 0; i--)
             numrs[i] = heapSort.remove();
         System.out.println(Arrays.toString(numrs)); // [1, 2, 3, 4, 5, 10]
+
+        // ******** Exercise - Heapify *********
+        int[] nms = { 5, 3, 8, 4, 1, 2 };
+        MaxHeap.heapify(nms);
+        System.out.println(Arrays.toString(nms)); // [8, 4, 5, 3, 1, 2]
     }
 
     // ********* Recursion ******************
