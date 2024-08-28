@@ -417,6 +417,22 @@ public class Main {
 
         heap.remove();
         // [17, 5, 10, 4, 5]
+
+        // ****** Heap Sort *******
+        int[] numrs = { 5, 3, 10, 1, 4, 2 };
+        var heapSort = new Heap(6);
+        for (var numr : numrs)
+            heapSort.insert(numr);
+        // while (!heapSort.isEmpty())
+        // System.out.println(heapSort.remove()); // 10 5 4 3 2 1
+
+        // for (var i = 0; i < numrs.length; i++)
+        // numrs[i] = heapSort.remove();
+        // System.out.println(Arrays.toString(numrs)); // [10, 5, 4, 3, 2, 1]
+
+        for (var i = numrs.length - 1; i >= 0; i--)
+            numrs[i] = heapSort.remove();
+        System.out.println(Arrays.toString(numrs)); // [1, 2, 3, 4, 5, 10]
     }
 
     // ********* Recursion ******************
