@@ -438,6 +438,10 @@ public class Main {
         int[] nms = { 5, 3, 8, 4, 1, 2 };
         MaxHeap.heapify(nms);
         System.out.println(Arrays.toString(nms)); // [8, 4, 5, 3, 1, 2]
+
+        System.out.println(MaxHeap.getKthLargest(nms, 1)); // 8
+        System.out.println(MaxHeap.getKthLargest(nms, 2)); // 5
+        System.out.println(MaxHeap.getKthLargest(nms, 6)); // 1
     }
 
     // ********* Recursion ******************

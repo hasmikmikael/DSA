@@ -37,6 +37,13 @@ public class Heap {
         items[second] = temp;
     }
 
+    public int max() {
+        if (isEmpty())
+            throw new IllegalStateException();
+
+        return items[0];
+    }
+
     public int remove() {
         if (isEmpty())
             throw new IllegalStateException();
