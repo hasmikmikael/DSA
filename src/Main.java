@@ -442,6 +442,10 @@ public class Main {
         System.out.println(MaxHeap.getKthLargest(nms, 1)); // 8
         System.out.println(MaxHeap.getKthLargest(nms, 2)); // 5
         System.out.println(MaxHeap.getKthLargest(nms, 6)); // 1
+
+        // int[] nums = { 8, 4, 5, 3, 1, 2, 7 }; // false
+        int[] nums = { 8, 7, 5, 4, 3, 2, 1 }; // true
+        System.out.println(Heap.isMaxHeap(nums));
     }
 
     // ********* Recursion ******************
