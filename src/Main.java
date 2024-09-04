@@ -456,6 +456,16 @@ public class Main {
         // [(4, "cat"), (10, "turtle"), (5, "mouse"), (20, "dog"), (15, "lizard")]
         minHeap.remove();
         // [(5, "mouse"), (10, "turtle"), (15, "lizard"), (20, "dog"), (15, "lizard")]
+
+        var minPriorityQueue = new MinPriorityQueue();
+        minPriorityQueue.add("dog", 20);
+        minPriorityQueue.add("cat", 4);
+        minPriorityQueue.add("mouse", 5);
+        minPriorityQueue.add("turtle", 10);
+        minPriorityQueue.add("lizard", 15);
+        // [(4, "cat"), (10, "turtle"), (5, "mouse"), (20, "dog"), (15, "lizard")]
+        minPriorityQueue.remove();
+        // [(5, "mouse"), (10, "turtle"), (15, "lizard"), (20, "dog"), (15, "lizard")]
     }
 
     // ********* Recursion ******************
