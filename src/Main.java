@@ -446,6 +446,16 @@ public class Main {
         // int[] nums = { 8, 4, 5, 3, 1, 2, 7 }; // false
         int[] nums = { 8, 7, 5, 4, 3, 2, 1 }; // true
         System.out.println(Heap.isMaxHeap(nums));
+
+        var minHeap = new MinHeap();
+        minHeap.insert(20, "dog");
+        minHeap.insert(4, "cat");
+        minHeap.insert(5, "mouse");
+        minHeap.insert(10, "turtle");
+        minHeap.insert(15, "lizard");
+        // [(4, "cat"), (10, "turtle"), (5, "mouse"), (20, "dog"), (15, "lizard")]
+        minHeap.remove();
+        // [(5, "mouse"), (10, "turtle"), (15, "lizard"), (20, "dog"), (15, "lizard")]
     }
 
     // ********* Recursion ******************
