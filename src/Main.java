@@ -466,6 +466,11 @@ public class Main {
         // [(4, "cat"), (10, "turtle"), (5, "mouse"), (20, "dog"), (15, "lizard")]
         minPriorityQueue.remove();
         // [(5, "mouse"), (10, "turtle"), (15, "lizard"), (20, "dog"), (15, "lizard")]
+
+        // ************ Tries ********************
+        var trie = new Trie();
+        trie.insert("cat");
+        trie.insert("can");
     }
 
     // ********* Recursion ******************
