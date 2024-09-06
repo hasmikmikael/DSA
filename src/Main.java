@@ -475,6 +475,12 @@ public class Main {
         System.out.println(trie.contains("can")); // false
         System.out.println(trie.contains("")); // false
         System.out.println(trie.contains(null)); // false
+
+        var triee = new Trie();
+        triee.insert("care");
+        triee.preOrderTraverse(); // c a r e
+        System.out.println(" ");
+        triee.postOrderTraverse(); // e r a c
     }
 
     // ********* Recursion ******************

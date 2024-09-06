@@ -29,6 +29,10 @@ public class Trie {
         public Node getChild(char ch) {
             return children.get(ch);
         }
+
+        public Node[] getChildren() {
+            return children.values().toArray(new Node[0]);
+        }
     }
 
     private Node root = new Node(' ');
@@ -78,5 +82,29 @@ public class Trie {
             current = current.getChild(ch);
         }
         return current.isEndOfWord;
+    }
+
+    public void preOrderTraverse() {
+        preOrderTraverse(root);
+    }
+
+    private void preOrderTraverse(Node root) {
+        // Pre-Order: visit the root first
+        System.out.println(root.value);
+
+        for (var child : root.getChildren())
+            preOrderTraverse(child);
+    }
+
+    public void postOrderTraverse() {
+        postOrderTraverse(root);
+    }
+
+    private void postOrderTraverse(Node root) {
+        for (var child : root.getChildren())
+            postOrderTraverse(child);
+
+        // Post-Order: visit the root last
+        System.out.println(root.value);
     }
 }
