@@ -475,12 +475,21 @@ public class Main {
         System.out.println(trie.contains("can")); // false
         System.out.println(trie.contains("")); // false
         System.out.println(trie.contains(null)); // false
+        trie.insert("can");
+        trie.remove("book");
+        trie.remove("");
+        trie.remove(null);
+        System.out.println(trie.contains("canada")); // true
+        System.out.println(trie.contains("can")); // true
+        trie.remove("can");
+        System.out.println(trie.contains("canada")); // true
+        System.out.println(trie.contains("can")); // false
 
-        var triee = new Trie();
-        triee.insert("care");
-        triee.preOrderTraverse(); // c a r e
-        System.out.println(" ");
-        triee.postOrderTraverse(); // e r a c
+        // var triee = new Trie();
+        // triee.insert("care");
+        // triee.preOrderTraverse(); // c a r e
+        // System.out.println(" ");
+        // triee.postOrderTraverse(); // e r a c
     }
 
     // ********* Recursion ******************
