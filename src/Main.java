@@ -470,7 +470,11 @@ public class Main {
         // ************ Tries ********************
         var trie = new Trie();
         trie.insert("cat");
-        trie.insert("can");
+        trie.insert("canada");
+        System.out.println(trie.contains("canada")); // true
+        System.out.println(trie.contains("can")); // false
+        System.out.println(trie.contains("")); // false
+        System.out.println(trie.contains(null)); // false
     }
 
     // ********* Recursion ******************
