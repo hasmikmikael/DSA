@@ -485,11 +485,26 @@ public class Main {
         System.out.println(trie.contains("canada")); // true
         System.out.println(trie.contains("can")); // false
 
-        // var triee = new Trie();
-        // triee.insert("care");
-        // triee.preOrderTraverse(); // c a r e
-        // System.out.println(" ");
-        // triee.postOrderTraverse(); // e r a c
+        var triee = new Trie();
+        triee.insert("care");
+        triee.preOrderTraverse(); // c a r e
+        System.out.println(" ");
+        triee.postOrderTraverse(); // e r a c
+
+        var tries = new Trie();
+        tries.insert("car");
+        tries.insert("card");
+        tries.insert("care");
+        tries.insert("careful");
+        tries.insert("egg");
+        var words = tries.findWords("car");
+        System.out.println(words); // [car, card, care, careful]
+        System.out.println(tries.findWords("care")); // [care, careful]
+        System.out.println(tries.findWords("cargo")); // []
+        System.out.println(tries.findWords("e")); // [egg]
+        System.out.println(tries.findWords("c")); // [car, card, care, careful]
+        System.out.println(tries.findWords("")); // [car, card, care, careful, egg]
+        System.out.println(tries.findWords(null)); // []
     }
 
     // ********* Recursion ******************
