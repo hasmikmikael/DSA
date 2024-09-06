@@ -505,6 +505,8 @@ public class Main {
         System.out.println(tries.findWords("c")); // [car, card, care, careful]
         System.out.println(tries.findWords("")); // [car, card, care, careful, egg]
         System.out.println(tries.findWords(null)); // []
+
+        System.out.println(tries.containsRecursive("car")); // true
     }
 
     // ********* Recursion ******************
