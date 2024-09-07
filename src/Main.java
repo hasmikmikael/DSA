@@ -508,6 +508,9 @@ public class Main {
 
         System.out.println(tries.containsRecursive("car")); // true
         System.out.println(tries.countWords()); // 5
+
+        String[] word = { "car", "care" };
+        System.out.println(Trie.longestCommonPrefix(word)); // car
     }
 
     // ********* Recursion ******************

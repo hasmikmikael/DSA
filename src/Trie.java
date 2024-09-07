@@ -216,4 +216,60 @@ public class Trie {
 
         return total;
     }
+
+    // We add these words to a trie and walk down
+    // the trie. If a node has more than one child,
+    // that's where these words deviate. Try this
+    // with "can", "canada", "care" and "cab". You'll
+    // see that these words deviate after "ca".
+    //
+    // So, we keep walking down the tree as long as
+    // the current node has only one child.
+    //
+    // One edge cases we need to count is when two
+    // words are in the same branch and don't deviate.
+    // For example "can" and "canada". In this case,
+    // we keep walking down to the end because every
+    // node (except the last node) has only one child.
+    // But the longest common prefix here should be
+    // "can", not "canada". So, we should find the
+    // shortest word in the list first. The maximum
+    // number of characters we can include in the
+    // prefix should be equal to the length of the
+    // shortest word.
+
+    public static String longestCommonPrefix(String[] words) {
+        if (words == null)
+            return "";
+
+        var trie = new Trie();
+        for (var word : words)
+            trie.insert(word);
+
+        var prefix = new StringBuffer();
+        var maxChars = getShortest(words).length();
+        var current = trie.root;
+        while (prefix.length() < maxChars) {
+            var children = current.getChildren();
+            if (children.length != 1)
+                break;
+            current = children[0];
+            prefix.append(current.value);
+        }
+
+        return prefix.toString();
+    }
+
+    private static String getShortest(String[] words) {
+        if (words == null || words.length == 0)
+            return "";
+
+        var shortest = words[0];
+        for (var i = 1; i < words.length; i++) {
+            if (words[i].length() < shortest.length())
+                shortest = words[i];
+        }
+
+        return shortest;
+    }
 }
