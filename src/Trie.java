@@ -200,4 +200,20 @@ public class Trie {
 
         return containsRecursive(child, word, index + 1);
     }
+
+    public int countWords() {
+        return countWords(root);
+    }
+
+    private int countWords(Node root) {
+        int total = 0;
+
+        if (root.isEndOfWord)
+            total++;
+
+        for (var child : root.getChildren())
+            total += countWords(child);
+
+        return total;
+    }
 }
