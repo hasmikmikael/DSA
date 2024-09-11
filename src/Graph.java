@@ -20,13 +20,13 @@ public class Graph {
     private Map<String, Node> nodes = new HashMap<>();
     private Map<Node, List<Node>> adjacencyList = new HashMap<>();
 
-    private void addNode(String label) {
+    public void addNode(String label) {
         var node = new Node(label);
         nodes.putIfAbsent(label, node);
         adjacencyList.putIfAbsent(node, new ArrayList<>());
     }
 
-    private void addEdge(String from, String to) {
+    public void addEdge(String from, String to) {
         var fromNode = nodes.get(from);
         if (fromNode == null)
             throw new IllegalArgumentException();
@@ -44,5 +44,27 @@ public class Graph {
             if (!targets.isEmpty())
                 System.out.println(source + " is connected to " + targets);
         }
+    }
+
+    public void removeNode(String label) {
+        var node = nodes.get(label);
+        if (label == null)
+            return;
+
+        for (var n : adjacencyList.keySet())
+            adjacencyList.get(n).remove(node);
+
+        adjacencyList.remove(node);
+        nodes.remove(node);
+    }
+
+    public void removeEdge(String from, String to) {
+        var fromNode = nodes.get(from);
+        var toNode = nodes.get(to);
+
+        if (fromNode == null || toNode == null)
+            return;
+
+        adjacencyList.get(fromNode).remove(toNode);
     }
 }
