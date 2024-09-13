@@ -540,9 +540,12 @@ public class Main {
         grph.addEdge("B", "D");
         grph.addEdge("D", "C");
         grph.addEdge("A", "C");
-        grph.traverseDepthFirst("A"); // A B D C
+        grph.traverseDepthFirstRecursive("A"); // A B D C
+        grph.traverseDepthFirstRecursive("C"); // C
+        grph.traverseDepthFirstRecursive("G"); //
+        grph.traverseDepthFirst("A"); // A C B D
         grph.traverseDepthFirst("C"); // C
-        grph.traverseDepthFirst("G"); //
+        grph.traverseDepthFirst("R"); //
     }
 
     // ********* Recursion ******************
