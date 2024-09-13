@@ -530,6 +530,19 @@ public class Main {
         graph.print(); // ...
         graph.addEdge("B", "C");
         graph.print(); // B is connected to [C]
+
+        var grph = new Graph();
+        grph.addNode("A");
+        grph.addNode("B");
+        grph.addNode("C");
+        grph.addNode("D");
+        grph.addEdge("A", "B");
+        grph.addEdge("B", "D");
+        grph.addEdge("D", "C");
+        grph.addEdge("A", "C");
+        grph.traverseDepthFirst("A"); // A B D C
+        grph.traverseDepthFirst("C"); // C
+        grph.traverseDepthFirst("G"); //
     }
 
     // ********* Recursion ******************
