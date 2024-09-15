@@ -546,6 +546,9 @@ public class Main {
         grph.traverseDepthFirst("A"); // A C B D
         grph.traverseDepthFirst("C"); // C
         grph.traverseDepthFirst("R"); //
+        grph.traverseBreadthFirst("A"); // A B C D
+        grph.traverseBreadthFirst("C"); // C
+        grph.traverseBreadthFirst("K"); //
     }
 
     // ********* Recursion ******************
