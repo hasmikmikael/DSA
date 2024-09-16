@@ -549,6 +549,18 @@ public class Main {
         grph.traverseBreadthFirst("A"); // A B C D
         grph.traverseBreadthFirst("C"); // C
         grph.traverseBreadthFirst("K"); //
+
+        var gr = new Graph();
+        gr.addNode("X");
+        gr.addNode("A");
+        gr.addNode("B");
+        gr.addNode("P");
+        gr.addEdge("X", "A");
+        gr.addEdge("X", "B");
+        gr.addEdge("A", "P");
+        gr.addEdge("B", "P");
+        var lst = gr.topologicalSort();
+        System.out.println(lst); // [X, B, A, P]
     }
 
     // ********* Recursion ******************
