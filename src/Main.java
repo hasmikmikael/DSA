@@ -561,6 +561,18 @@ public class Main {
         gr.addEdge("B", "P");
         var lst = gr.topologicalSort();
         System.out.println(lst); // [X, B, A, P]
+
+        var grp = new Graph();
+        grp.addNode("A");
+        grp.addNode("B");
+        grp.addNode("C");
+        grp.addEdge("A", "B");
+        grp.addEdge("B", "C");
+        // grp.addEdge("A", "C");
+        // System.out.println(grp.hasCycle()); // false
+        grp.addEdge("C", "A");
+        System.out.println(grp.hasCycle()); // true
+
     }
 
     // ********* Recursion ******************
