@@ -573,6 +573,18 @@ public class Main {
         grp.addEdge("C", "A");
         System.out.println(grp.hasCycle()); // true
 
+        // *********** Undirected Graphs ************
+        var weightedGraph = new WeightedGraph();
+        weightedGraph.addNode("A");
+        weightedGraph.addNode("B");
+        weightedGraph.addNode("C");
+        weightedGraph.addEdge("A", "B", 3);
+        weightedGraph.addEdge("A", "C", 2);
+        weightedGraph.print();
+        // B is connected to [B->A]
+        // A is connected to [A->B, A->C]
+        // C is connected to [C->A]
+
     }
 
     // ********* Recursion ******************
