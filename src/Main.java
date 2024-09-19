@@ -594,6 +594,8 @@ public class Main {
         dijGraph.addEdge("A", "C", 10);
         var distance = dijGraph.getShortestDistance("A", "C");
         System.out.println(distance); // 3
+        var path = dijGraph.getShortestPath("A", "C");
+        System.out.println(path); // [A, B, C]
 
     }
 
