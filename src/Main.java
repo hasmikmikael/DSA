@@ -585,6 +585,16 @@ public class Main {
         // A is connected to [A->B, A->C]
         // C is connected to [C->A]
 
+        var dijGraph = new WeightedGraph();
+        dijGraph.addNode("A");
+        dijGraph.addNode("B");
+        dijGraph.addNode("C");
+        dijGraph.addEdge("A", "B", 1);
+        dijGraph.addEdge("B", "C", 2);
+        dijGraph.addEdge("A", "C", 10);
+        var distance = dijGraph.getShortestDistance("A", "C");
+        System.out.println(distance); // 3
+
     }
 
     // ********* Recursion ******************
