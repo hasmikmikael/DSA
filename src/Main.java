@@ -606,6 +606,23 @@ public class Main {
         System.out.println(cycleGraph.hasCycle()); // false
         cycleGraph.addEdge("C", "A", 0);
         System.out.println(cycleGraph.hasCycle()); // true
+
+        var primGraph = new WeightedGraph();
+        primGraph.addNode("A");
+        primGraph.addNode("B");
+        primGraph.addNode("C");
+        primGraph.addNode("D");
+        primGraph.addEdge("A", "B", 3);
+        primGraph.addEdge("B", "D", 4);
+        primGraph.addEdge("C", "D", 5);
+        primGraph.addEdge("A", "C", 1);
+        primGraph.addEdge("B", "C", 2);
+        var spTree = primGraph.getMinimumSpanningTree();
+        spTree.print();
+        // A is connected to [A->C]
+        // B is connected to [B->C, B->D]
+        // C is connected to [C->A, C->B]
+        // D is connected to [D->B]
     }
 
     // ********* Recursion ******************
