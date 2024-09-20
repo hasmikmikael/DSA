@@ -597,6 +597,15 @@ public class Main {
         var path = dijGraph.getShortestPath("A", "C");
         System.out.println(path); // [A, B, C]
 
+        var cycleGraph = new WeightedGraph();
+        cycleGraph.addNode("A");
+        cycleGraph.addNode("B");
+        cycleGraph.addNode("C");
+        cycleGraph.addEdge("A", "B", 0);
+        cycleGraph.addEdge("B", "C", 0);
+        System.out.println(cycleGraph.hasCycle()); // false
+        cycleGraph.addEdge("C", "A", 0);
+        System.out.println(cycleGraph.hasCycle()); // true
     }
 
     // ********* Recursion ******************
