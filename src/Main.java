@@ -623,6 +623,16 @@ public class Main {
         // B is connected to [B->C, B->D]
         // C is connected to [C->A, C->B]
         // D is connected to [D->B]
+
+        // ***********Algorithms **************
+        ///////////////////////////////////////
+        ///////////////////////////////////////
+
+        // ************ Bubble Sort ************
+        int[] numbs = { 7, 3, 1, 4, 6, 2, 3 };
+        var sorter = new BubbleSort();
+        sorter.sort(numbs);
+        System.out.println(Arrays.toString(numbs)); // [1, 2, 3, 3, 4, 6, 7]
     }
 
     // ********* Recursion ******************
