@@ -633,6 +633,12 @@ public class Main {
         var sorter = new BubbleSort();
         sorter.sort(numbs);
         System.out.println(Arrays.toString(numbs)); // [1, 2, 3, 3, 4, 6, 7]
+
+        // *********** Selection Sort ***********
+        int[] nm = { 7, 3, 1, 5, 2 };
+        var selectionSort = new SelectionSort();
+        selectionSort.sort(nm);
+        System.out.println(Arrays.toString(nm)); // [1, 2, 3, 5, 7]
     }
 
     // ********* Recursion ******************
