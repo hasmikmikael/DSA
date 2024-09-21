@@ -639,6 +639,12 @@ public class Main {
         var selectionSort = new SelectionSort();
         selectionSort.sort(nm);
         System.out.println(Arrays.toString(nm)); // [1, 2, 3, 5, 7]
+
+        // *********** Insertion Sort ***********
+        int[] nmb = { 7, 3, 5, 2, 3, 1, 5, 8 };
+        var insertionSort = new InsertionSort();
+        insertionSort.sort(nmb);
+        System.out.println(Arrays.toString(nmb)); // [1, 2, 3, 3, 5, 5, 7, 8]
     }
 
     // ********* Recursion ******************
