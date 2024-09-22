@@ -645,6 +645,11 @@ public class Main {
         var insertionSort = new InsertionSort();
         insertionSort.sort(nmb);
         System.out.println(Arrays.toString(nmb)); // [1, 2, 3, 3, 5, 5, 7, 8]
+
+        int[] nb = { 7, 3, 5, 2, 3, 1, 5, 8 };
+        var mergeSort = new MergeSort();
+        mergeSort.sort(nb);
+        System.out.println(Arrays.toString(nb)); // [1, 2, 3, 3, 5, 5, 7, 8]
     }
 
     // ********* Recursion ******************
