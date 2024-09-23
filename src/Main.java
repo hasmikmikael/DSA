@@ -655,6 +655,11 @@ public class Main {
         var quickSort = new QuickSort();
         quickSort.sort(nrb);
         System.out.println(Arrays.toString(nrb)); // [1, 1, 2, 2, 3, 3, 5, 7, 7]
+
+        int[] ns = { 5, 1, 7, 2, 6, 4 };
+        var countingSort = new CountingSort();
+        countingSort.sort(ns, 7);
+        System.out.println(Arrays.toString(ns)); // [1, 2, 4, 5, 6, 7]
     }
 
     // ********* Recursion ******************
