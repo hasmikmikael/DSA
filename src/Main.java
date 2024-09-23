@@ -650,6 +650,11 @@ public class Main {
         var mergeSort = new MergeSort();
         mergeSort.sort(nb);
         System.out.println(Arrays.toString(nb)); // [1, 2, 3, 3, 5, 5, 7, 8]
+
+        int[] nrb = { 7, 3, 1, 5, 7, 2, 3, 1, 2 };
+        var quickSort = new QuickSort();
+        quickSort.sort(nrb);
+        System.out.println(Arrays.toString(nrb)); // [1, 1, 2, 2, 3, 3, 5, 7, 7]
     }
 
     // ********* Recursion ******************
