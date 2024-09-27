@@ -660,6 +660,13 @@ public class Main {
         var countingSort = new CountingSort();
         countingSort.sort(ns, 7);
         System.out.println(Arrays.toString(ns)); // [1, 2, 4, 5, 6, 7]
+
+        int[] nmrs = { 7, 1, 3, 5, 3 };
+        var bucketSort = new BucketSort();
+        bucketSort.sort(nmrs, 3);
+        System.out.println(Arrays.toString(nmrs)); // [1, 3, 3, 5, 7]
+        // bucketSort.sort(nmrs, 6);
+        // System.out.println(Arrays.toString(nmrs)); // [1, 3, 3, 5, 7]
     }
 
     // ********* Recursion ******************
