@@ -667,6 +667,13 @@ public class Main {
         System.out.println(Arrays.toString(nmrs)); // [1, 3, 3, 5, 7]
         // bucketSort.sort(nmrs, 6);
         // System.out.println(Arrays.toString(nmrs)); // [1, 3, 3, 5, 7]
+
+        // *********** Linear Search ****************
+        int[] lsNumbers = { 6, 2, 5, 4, 3, 7 };
+        var linearSearch = new Search();
+        var index = linearSearch.linearSearch(lsNumbers, 5);
+        System.out.println(index); // 2
+        System.out.println(linearSearch.linearSearch(lsNumbers, 70)); // -1
     }
 
     // ********* Recursion ******************
