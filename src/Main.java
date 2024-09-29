@@ -670,10 +670,16 @@ public class Main {
 
         // *********** Linear Search ****************
         int[] lsNumbers = { 6, 2, 5, 4, 3, 7 };
-        var linearSearch = new Search();
-        var index = linearSearch.linearSearch(lsNumbers, 5);
+        var search = new Search();
+        var index = search.linearSearch(lsNumbers, 5);
         System.out.println(index); // 2
-        System.out.println(linearSearch.linearSearch(lsNumbers, 70)); // -1
+        System.out.println(search.linearSearch(lsNumbers, 70)); // -1
+
+        // ************ Binary Search ***************
+        int[] bsNumbers = { 1, 3, 5, 6, 7 };
+        var bsIndex = search.binarySearchRec(bsNumbers, 6);
+        System.out.println(bsIndex); // 3
+        System.out.println(search.binarySearchRec(bsNumbers, 10)); // -1
     }
 
     // ********* Recursion ******************
