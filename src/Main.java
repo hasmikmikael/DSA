@@ -680,6 +680,9 @@ public class Main {
         var bsIndex = search.binarySearchRec(bsNumbers, 6);
         System.out.println(bsIndex); // 3
         System.out.println(search.binarySearchRec(bsNumbers, 10)); // -1
+
+        System.out.println(search.binarySearch(bsNumbers, 1)); // 0
+        System.out.println(search.binarySearch(bsNumbers, 70)); // -1
     }
 
     // ********* Recursion ******************
