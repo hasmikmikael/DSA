@@ -683,6 +683,11 @@ public class Main {
 
         System.out.println(search.binarySearch(bsNumbers, 1)); // 0
         System.out.println(search.binarySearch(bsNumbers, 70)); // -1
+
+        // *********** Ternary Search ****************
+        int[] tsNumbers = { 1, 3, 5, 6, 7 };
+        System.out.println(search.ternarySearch(tsNumbers, 7)); // 4
+        System.out.println(search.ternarySearch(tsNumbers, 0)); // -1
     }
 
     // ********* Recursion ******************
