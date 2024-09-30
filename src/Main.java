@@ -693,6 +693,11 @@ public class Main {
         int[] jsNumbers = { 1, 3, 5, 6, 7 };
         System.out.println(search.jumpSearch(jsNumbers, 5)); // 2
         System.out.println(search.jumpSearch(jsNumbers, 2)); // -1
+
+        // ********** Exponential Search **************
+        int[] esNumbers = { 1, 3, 5, 7, 9 };
+        System.out.println(search.exponentialSearch(esNumbers, 7)); // 3
+        System.out.println(search.exponentialSearch(esNumbers, 18)); // -1
     }
 
     // ********* Recursion ******************
