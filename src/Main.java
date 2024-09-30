@@ -688,6 +688,11 @@ public class Main {
         int[] tsNumbers = { 1, 3, 5, 6, 7 };
         System.out.println(search.ternarySearch(tsNumbers, 7)); // 4
         System.out.println(search.ternarySearch(tsNumbers, 0)); // -1
+
+        // ********** Jump Search ********************
+        int[] jsNumbers = { 1, 3, 5, 6, 7 };
+        System.out.println(search.jumpSearch(jsNumbers, 5)); // 2
+        System.out.println(search.jumpSearch(jsNumbers, 2)); // -1
     }
 
     // ********* Recursion ******************
