@@ -724,6 +724,11 @@ public class Main {
         System.out.println(StringUtils.areRotations("ABCD", "DABC1")); // false
         System.out.println(StringUtils.areRotations("ABCD", "DACB")); // false
         System.out.println(StringUtils.areRotations("ABCD", null)); // false
+
+        // *********** Remove Duplicates **************
+        var output = StringUtils.removeDuplicates("Trees are beautiful");
+        System.out.println(output); // Tres abutifl
+        System.out.println(StringUtils.removeDuplicates(null)); // ""
     }
 
     // ********* Recursion ******************
