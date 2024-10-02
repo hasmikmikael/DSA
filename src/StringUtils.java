@@ -2,8 +2,10 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
+import java.util.HashMap;
 
 public class StringUtils {
     public static int countVowels(String str) {
@@ -85,5 +87,48 @@ public class StringUtils {
         }
 
         return output.toString();
+    }
+
+    public static char getMaxOccuringChar(String str) {
+        if (str == null || str.isEmpty())
+            throw new IllegalArgumentException();
+
+        // // Implementation with the Hash Table
+        // Map<Character, Integer> frequencies = new HashMap();
+        // for (var ch : str.toCharArray()) {
+        // if (frequencies.containsKey(ch))
+        // frequencies.replace(ch, frequencies.get(ch) + 1);
+        // else
+        // frequencies.put(ch, 1);
+        // }
+
+        // int max = -1;
+        // char result = ' ';
+        // for (var item : frequencies.entrySet()) {
+        // if (item.getValue() > max) {
+        // max = item.getValue();
+        // result = item.getKey();
+        // }
+        // }
+        // return result;
+
+        // Implementation with the Array using ASCII Table
+        final int ASCII_SIZE = 256;
+        int[] frequencies = new int[ASCII_SIZE];
+        for (var ch : str.toCharArray())
+            frequencies[ch]++;
+        // a
+        // frequencies['a'] = 5; // 'a' = 61
+        // frequencies[61] = 5;
+
+        int max = 0;
+        char result = ' ';
+        for (var i = 0; i < frequencies.length; i++)
+            if (frequencies[i] > max) {
+                max = frequencies[i];
+                result = (char) i;
+            }
+
+        return result;
     }
 }

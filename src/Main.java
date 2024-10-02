@@ -729,6 +729,10 @@ public class Main {
         var output = StringUtils.removeDuplicates("Trees are beautiful");
         System.out.println(output); // Tres abutifl
         System.out.println(StringUtils.removeDuplicates(null)); // ""
+
+        // ********** Most Repeated Char **************
+        var rslt = StringUtils.getMaxOccuringChar("Hellooooo");
+        System.out.println(rslt); // o
     }
 
     // ********* Recursion ******************
