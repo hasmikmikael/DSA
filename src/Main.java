@@ -706,6 +706,13 @@ public class Main {
         // ********** Count Vowels *************
         int count = StringUtils.countVowels("Hello World!");
         System.out.println(count); // 3
+
+        // *********** Reverse a String *****************
+        String reversed = StringUtils.reverse("blue");
+        System.out.println(reversed); // eulb
+        System.out.println(StringUtils.reverse("BLUE")); // EULB
+        System.out.println(StringUtils.reverse("")); //
+        System.out.println(StringUtils.reverse(null).length()); // 0
     }
 
     // ********* Recursion ******************
