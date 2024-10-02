@@ -713,6 +713,10 @@ public class Main {
         System.out.println(StringUtils.reverse("BLUE")); // EULB
         System.out.println(StringUtils.reverse("")); //
         System.out.println(StringUtils.reverse(null).length()); // 0
+
+        // *********** Reverse Words ******************
+        String reversedWords = StringUtils.reverseWords("Trees are beautiful");
+        System.out.println("'" + reversedWords + "'"); // 'beautiful are Trees'
     }
 
     // ********* Recursion ******************
