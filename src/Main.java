@@ -717,6 +717,13 @@ public class Main {
         // *********** Reverse Words ******************
         String reversedWords = StringUtils.reverseWords("Trees are beautiful");
         System.out.println("'" + reversedWords + "'"); // 'beautiful are Trees'
+
+        // ********** Rotations *********************
+        var rotations = StringUtils.areRotations("ABCD", "DABC");
+        System.out.println(rotations); // true
+        System.out.println(StringUtils.areRotations("ABCD", "DABC1")); // false
+        System.out.println(StringUtils.areRotations("ABCD", "DACB")); // false
+        System.out.println(StringUtils.areRotations("ABCD", null)); // false
     }
 
     // ********* Recursion ******************

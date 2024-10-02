@@ -45,4 +45,26 @@ public class StringUtils {
 
         // return reversed.toString().trim();
     }
+
+    // ABCD -> DABC
+    // -> CDAB
+    // -> BCDA
+    // -> ABCD
+    // ABCDABCD
+    public static boolean areRotations(
+            String str1, String str2) {
+        if (str1 == null || str2 == null)
+            return false;
+
+        // if (str1.length() != str2.length())
+        // return false;
+
+        // if (!(str1 + str1).contains(str2))
+        // return false;
+
+        // return true;
+
+        return (str1.length() == str2.length() &&
+                (str1 + str1).contains(str2));
+    }
 }
