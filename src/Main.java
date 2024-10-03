@@ -740,6 +740,14 @@ public class Main {
         System.out.println(StringUtils.capitalize("TODAY IS A GREAT DAY")); // Today Is A Great Day
         System.out.println(StringUtils.capitalize("    TODAY    IS    A GREAT DAY")); // Today Is A Great Day
         System.out.println(StringUtils.capitalize("    ")); // ""
+
+        // ******** Anagrams : Using Sorting **********
+        var rst = StringUtils.areAnagrams("ABCD", "DBCA");
+        System.out.println(rst); // true
+        System.out.println(StringUtils.areAnagrams("ABCX", "DBCA")); // false
+        System.out.println(StringUtils.areAnagrams("ABCd", "DBCA")); // true
+        System.out.println(StringUtils.areAnagrams("ABCd", " ")); // false
+
     }
 
     // ********* Recursion ******************
