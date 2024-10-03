@@ -733,6 +733,13 @@ public class Main {
         // ********** Most Repeated Char **************
         var rslt = StringUtils.getMaxOccuringChar("Hellooooo");
         System.out.println(rslt); // o
+
+        // ******** Sentence Capitalization ************
+        var reslt = StringUtils.capitalize("today is a great day");
+        System.out.println(reslt); // Today Is A Great Day
+        System.out.println(StringUtils.capitalize("TODAY IS A GREAT DAY")); // Today Is A Great Day
+        System.out.println(StringUtils.capitalize("    TODAY    IS    A GREAT DAY")); // Today Is A Great Day
+        System.out.println(StringUtils.capitalize("    ")); // ""
     }
 
     // ********* Recursion ******************
