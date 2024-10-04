@@ -149,19 +149,51 @@ public class StringUtils {
         return String.join(" ", words);
     }
 
+    // O(n log n)
     public static boolean areAnagrams(String first, String second) {
         if (first == null || second == null)
             // || first.length() != second.length()) // we need this
             // if we have very long strings like containing 1 million characters
             return false;
 
+        // O(n)
         // Case insensitive
         var array1 = first.toLowerCase().toCharArray();
+        // O(n log n)
         Arrays.sort(array1);
 
+        // O(n)
         var array2 = second.toLowerCase().toCharArray();
+        // O(n log n)
         Arrays.sort(array2);
 
+        // O(n)
         return Arrays.equals(array1, array2);
+    }
+
+    // O(n) - this approach is faster
+    public static boolean areAnagram2(String first, String second) {
+        if (first == null || second == null)
+            return false;
+
+        final int ENGLISH_ALPHABET = 26;
+        int[] frequencies = new int[ENGLISH_ALPHABET];
+
+        first = first.toLowerCase();
+        // O(n)
+        for (var i = 0; i < first.length(); i++)
+            frequencies[first.charAt(i) - 'a']++; // 'a' = 97
+
+        second = second.toLowerCase();
+        // O(n)
+        for (var i = 0; i < second.length(); i++) {
+            int index = second.charAt(i) - 'a';
+            if (frequencies[index] == 0)
+                return false;
+
+            frequencies[index]--;
+        }
+
+        return true;
     }
 }

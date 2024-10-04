@@ -748,6 +748,11 @@ public class Main {
         System.out.println(StringUtils.areAnagrams("ABCd", "DBCA")); // true
         System.out.println(StringUtils.areAnagrams("ABCd", " ")); // false
 
+        // ******** Anagrams : Using Histogramming **********
+        var rest = StringUtils.areAnagram2("ABCD", "DBCA");
+        System.out.println(rest); // true
+        System.out.println(StringUtils.areAnagram2("ABCX", "DBCA")); // false
+        System.out.println(StringUtils.areAnagram2("ABCd", "DBCA")); // true
     }
 
     // ********* Recursion ******************
