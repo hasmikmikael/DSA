@@ -753,6 +753,12 @@ public class Main {
         System.out.println(rest); // true
         System.out.println(StringUtils.areAnagram2("ABCX", "DBCA")); // false
         System.out.println(StringUtils.areAnagram2("ABCd", "DBCA")); // true
+
+        // ******** Palindrome **********
+        var rsut = StringUtils.isPalindrome("ABBA");
+        System.out.println(rsut); // true
+        System.out.println(StringUtils.isPalindrome("ABBC")); // false
+        System.out.println(StringUtils.isPalindrome("ABBa")); // false
     }
 
     // ********* Recursion ******************
